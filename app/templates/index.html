@@ -1,0 +1,25 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            <h1>{{title}}</h1>
+        </div>
+    </div>
+
+    <div class="container">
+		<div class="row row-cols-auto">
+		    {% for user in users %}			
+            <div class="card" style="width: 12rem;">
+                <img src="{{user.avatar_url}}" class="card-img-top" alt="avatar">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.id}} - {{user.username}}</h5>
+                    <p class="card-text">User Type: {{user.type}}</p>
+                    <a href="{{user.url}}" class="btn btn-primary" target="blank">GitHub Profile</a>
+                </div>
+            </div>
+		    {% endfor %}
+		</div>
+    </div>
+{% endblock %}
+
