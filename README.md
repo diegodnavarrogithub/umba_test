@@ -8,7 +8,7 @@ pip install requirements.txt
 ```
 run
 ```console
-python scripts/seed.py
+python app/seed.py
 ```
 Command without -t <total records> or -total <total records>  flag will pull all records 
 ```console
